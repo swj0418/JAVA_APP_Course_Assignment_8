@@ -228,7 +228,12 @@ public class Main {
 	
 	public static void main(String[] ar)
 	{
-		Main M = new Main();
+		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new Main();
+            }
+        });
+
 	}
 	
 	void Calculation(ArrayList A_1, ArrayList Inter, String operand)
